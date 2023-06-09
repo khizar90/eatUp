@@ -10,5 +10,4 @@ class ImageUploadAction{
         $image->storeAs('public/' .$path, $filename);
         return $filename;
     }
-
 }

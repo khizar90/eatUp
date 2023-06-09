@@ -66,7 +66,7 @@
                                             <td>{{ $catgory->product->name ?? 'no name' }}</td>
                                             <td>{{ $catgory->product->price ?? 'no price' }}</td>
 
-                                            <td>{{ $catgory->discount_percentage ?? 'no old'}}</td>
+                                            <td>{{ $catgory->discount_percentage  ?? 'no old'}} %</td>
 
 
 

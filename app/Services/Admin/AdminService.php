@@ -11,17 +11,15 @@ class AdminService{
     public function addCategory($request,$filename)
     {
 
-        
-
         $categories = new Category();
         $categories->name = $request->category;
         $categories->image = $filename;
 
         $categories->save();
-        $categories = Category::paginate(10);
+        
         session()->flash('add', 'catgory added successfully!');
 
-        return view('categories', compact('categories'));
+        return redirect()->route('category');
     }
 
     public function updateCategory($request, $cat_id,$filename)

@@ -40,9 +40,7 @@ class AdminController extends Controller
     {
 
         $images = $request->file('image');
-
         $filename = $image->handle('cat_images', $images);
-
         return $this->adminService->addCategory($request, $filename);
     }
 

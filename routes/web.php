@@ -64,6 +64,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('updateDeals/{cat_id}', [AdminController::class, 'updateDeals'])->name('updateDeals');
     Route::get('listDeals', [AdminController::class, 'listDeals'])->name('listDeals');
     Route::get('deleteDeal/{cat_id}', [AdminController::class, 'deleteDeal'])->name('deleteDeal');
+
+
     Route::get('/home', function () {
         return view('home');
     })->name('home');

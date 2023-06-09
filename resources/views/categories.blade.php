@@ -20,7 +20,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-center mb-3">Lsit of All Categories</h5>
 
-                            <form class="form-inline mb-3" action="{{ route('addCategory') }}" method="post"
+                            <form class="form-inline mb-3" action="{{ route('addCategory') }}" method="POST"
                                 enctype="multipart/form-data">
                                 @csrf
 
@@ -82,9 +82,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @php
+                                        $i =1;
+                                    @endphp
                                     @foreach ($categories as $catgory)
                                         <tr>
-                                            <th>{{ $catgory->id }}</th>
+                                            <th>{{ $i++ }}</th>
                                             <td>
                                                 @if ($catgory->image)
                                                     <img src="{{ asset('storage/cat_images/' . $catgory->image) }}"
