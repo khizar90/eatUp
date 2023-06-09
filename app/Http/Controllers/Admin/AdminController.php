@@ -138,8 +138,6 @@ class AdminController extends Controller
 
     public function listDeals()
     {
-
-
         $categories = Deal::with('product')->paginate(15);
 
         return view('listDeals', compact('categories'));

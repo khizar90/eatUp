@@ -52,9 +52,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @php
+                                        $i =1;
+                                    @endphp
                                     @foreach ($categories as $catgory)
                                         <tr>
-                                            <th>{{ $catgory->id }}</th>
+                                            <th>{{ $i++ }}</th>
                                             <td>
                                                 @if ($catgory->product->image )
                                                     <img src="{{ asset('storage/sub_cat_images/' . $catgory->product->image) }}"
